@@ -1,0 +1,114 @@
+baseURL = 'https://atooshi-note.com/'
+languageCode = 'ja-JP'
+hasCJKLanguage = "true"
+title = 'あとをしNOTE'
+theme = "hugo_theme_robust-master"
+summaryLength = 50
+
+# googleAnalytics = "UA-XXXXXXXXX-X" # Optional Universal Analytics
+googleAnalytics = "G-XXXXXXXXXX" # Optional Google Analytcs 4
+# disqusShortname = "atooshi-note"
+
+paginate = 20
+
+[params]
+# description = "This is site description"
+# dateformat = "Jan 2, 2006" # Optional
+dateformat = "2006/01/02" # Optional
+# Fonts settings.
+googlefonts = "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" # Optional, Include google fonts.
+fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
+logofontfamily = "Lobster, cursive" # Optional, Override logo font.
+
+# enableHighlight = true # highlight.js option
+
+show_thumb_post = false
+
+[params.author]
+thumbnail = "images/author.jpg"
+name = "KOU"
+# description = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p><p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+description = "<p>自分が試したことを好きな様に載せてます^_^ </p><p>Mac Windows iPhone 電子工作 投資など。</p><p>WordPressからHUGOに移行しました。</p>"
+# facebook = "https://www.facebook.com/daisuke.tsuji.735"
+twitter = "https://twitter.com/KOUatooshiNOTE"
+# github = "https://github.com/dim0627"
+
+[outputs]
+page = [ "HTML", "AMP" ] # if you want AMP enable.
+
+[taxonomies]
+  tag = "tags"
+  archive = "archives"
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.asciidocExt]
+    backend = 'html5'
+    extensions = []
+    failureLevel = 'fatal'
+    noHeaderOrFooter = true
+    preserveTOC = false
+    safeMode = 'unsafe'
+    sectionNumbers = false
+    trace = false
+    verbose = false
+    workingFolderCurrent = false
+    [markup.asciidocExt.attributes]
+  [markup.blackFriday]
+    angledQuotes = false
+    footnoteAnchorPrefix = ''
+    footnoteReturnLinkContents = ''
+    fractions = true
+    hrefTargetBlank = false
+    latexDashes = true
+    nofollowLinks = false
+    noreferrerLinks = false
+    plainIDAnchors = true
+    skipHTML = false
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      linkifyProtocol = 'https'
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+      [markup.goldmark.parser.attribute]
+        block = false
+        title = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 1
+
+
+enableGitInfo = true
+
+[frontmatter]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
